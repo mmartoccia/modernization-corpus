@@ -1,0 +1,25 @@
+# Aggregation (users generate locally)
+modernization-corpus-aggregate/
+
+# Analysis results
+corpus-analysis-results/
+corpus-verification-results/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Build artifacts
+node_modules/
+__pycache__/
+*.pyc
+target/
+build/
+dist/
+
+# Logs
+*.log
