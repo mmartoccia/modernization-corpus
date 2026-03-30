@@ -4,18 +4,21 @@ A curated collection of real legacy codebases for evaluating code modernization 
 
 ## What You Get
 
-**8 production-grade legacy systems. 480K+ lines of code. Real modernization challenges.**
+**11 production-grade legacy systems. 550K+ lines of code. Real modernization challenges.**
 
 | System | Language | Size | Domain |
 |--------|----------|------|--------|
 | Apache OFBiz | Java | 100K+ LOC | ERP/CRM/E-Commerce |
 | Odoo | Python | 200K+ LOC | ERP/Business Apps |
 | Alfresco | Java | 100K+ LOC | Enterprise Content Mgmt |
+| Nuxeo | Java | 50K+ LOC | Document Management |
 | Django Oscar | Python | 10K-15K LOC | E-Commerce |
 | Umbraco | C# | 50K+ LOC | Content Management |
 | B2CWeb | Java | 5K-8K LOC | E-Commerce |
 | Mezzanine | Python | 5K-10K LOC | CMS |
 | DFe.NET | C# | 5K LOC | Invoicing |
+| Monolith Enterprise | Java | 5K+ LOC | Generic Enterprise |
+| CFWheels | ColdFusion | Framework | Web Framework |
 
 ## Quick Start
 
@@ -32,6 +35,9 @@ cd modernization-corpus-aggregate/
 ./DISTRIBUTE.sh /path/to/destination/
 # or
 ./ANALYZE-ALL.sh ./results/
+
+# Systems cloned: OFBiz, Odoo, Alfresco, Nuxeo, Django Oscar, 
+# Umbraco, B2CWeb, Mezzanine, DFe.NET, Monolith Enterprise, CFWheels
 ```
 
 ## What's in Each System
@@ -52,7 +58,7 @@ cd modernization-corpus-aggregate/
 ## Files in This Repo
 
 - **README.md** (you are here)
-- **CORPUS-AGGREGATION-SETUP.sh** - One-command clone + analyze all 8 systems
+- **CORPUS-AGGREGATION-SETUP.sh** - One-command clone + analyze all 11 systems
 - **CORPUS-SEARCH-RESULTS.md** - How we found these systems (reference only)
 
 ## Structure
@@ -67,7 +73,14 @@ modernization-corpus/
     ├── apache-ofbiz/          [Full codebase + metrics + tests]
     ├── odoo/                  [Full codebase + metrics + tests]
     ├── alfresco-community/    [Full codebase + metrics + tests]
-    ├── ... (5 more systems)
+    ├── nuxeo/                 [Full codebase + metrics + tests]
+    ├── django-oscar/          [Full codebase + metrics + tests]
+    ├── umbraco-cms/           [Full codebase + metrics + tests]
+    ├── b2cweb/                [Full codebase + metrics + tests]
+    ├── mezzanine/             [Full codebase + metrics + tests]
+    ├── dfe-net/               [Full codebase + metrics + tests]
+    ├── monolith-enterprise/   [Full codebase + metrics + tests]
+    ├── cfwheels/              [Full codebase + metrics + tests]
     ├── DISTRIBUTE.sh          [Copy repos elsewhere]
     ├── ANALYZE-ALL.sh         [Batch metrics]
     └── README.md              [Repository manifest]
@@ -116,7 +129,7 @@ Each system includes MODERNIZATION.md with:
 ### Option 1: Aggregate Script (Recommended)
 ```bash
 bash CORPUS-AGGREGATION-SETUP.sh
-# Creates modernization-corpus-aggregate/ with all 8 systems + helper scripts
+# Creates modernization-corpus-aggregate/ with all 11 systems + helper scripts
 # Time: 30-60 minutes (internet speed dependent)
 # Space: ~1-2 GB
 ```
